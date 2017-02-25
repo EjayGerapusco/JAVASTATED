@@ -31,7 +31,7 @@ body, html {
     <a href="#home" class="w3-bar-item w3-button w3-wide">Share My Playlist</a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">CREATE</a>
+      <a href="/adding" class="w3-bar-item w3-button">CREATE</a>
       <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i>EDIT</a>
       <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> SHARE</a>
     </div>
