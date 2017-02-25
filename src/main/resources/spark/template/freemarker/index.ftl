@@ -31,11 +31,9 @@ body, html {
     <a href="#home" class="w3-bar-item w3-button w3-wide">Share My Playlist</a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
-      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
-      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+      <a href="#about" class="w3-bar-item w3-button">CREATE</a>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i>EDIT</a>
+      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> SHARE</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -135,9 +133,9 @@ body, html {
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card-2">
-        <img src="https://scontent.fmnl6-1.fna.fbcdn.net/v/t31.0-8/q88/s960x960/15731906_1769966243327804_2291485971399773954_o.jpg?oh=c108ae66392b103d816fb4b7083666a2&oe=59330F8A" alt="Kim" style="width:100%">
+        <img src="https://avatars1.githubusercontent.com/u/24403325?v=3&s=460" alt="Kim" style="width:100%">
         <div class="w3-container">
-          <h3>Kimberly</h3>
+          <h3>Ejay</h3>
           
           <p><button class="w3-btn-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
