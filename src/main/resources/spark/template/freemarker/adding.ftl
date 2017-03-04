@@ -25,20 +25,20 @@
 <form method = "post" action="/adding">
   <div class="form-group">
     <label for="exampleInputItem1">Song: </label>
-    <input type="nameofitem" name="Item1" class="form-control" id="InputItemName" placeholder="Song Name">
+    <input type="nameofitem" name="song" class="form-control" id="InputItemName" placeholder="Song Name">
   </div>
   <div class="form-group">
     <label for="exampleInputDetails1">Artist: </label>
-    <input type="details" name="Item1Details" class="form-control" id="InputItemDetails" placeholder="Artist">
+    <input type="details" name="artist" class="form-control" id="InputItemDetails" placeholder="Artist">
   </div>
  
-  <button type="button" class="btn btn-success">
+  <button type="submit" class="btn btn-default">
     Submit 
   </button>
 </form>
 
 <button type="button" class="btn btn-info">
-    <a href="/index">
+    <a href="/">
        Home
       </a>
   </button>
