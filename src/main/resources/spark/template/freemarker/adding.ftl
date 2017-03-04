@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
- 
+<style>
+  body {
+    background-image: url("https://images2.alphacoders.com/701/thumb-1920-70172.jpg");
+  }
+</style> 
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   
@@ -13,8 +17,13 @@
 
 
 <div class="text-center">
-<h2>Add a Song</h2>
+<h2>
+<font color="5dccff">
+Add a Song
+</font>
+</h2>
 </div>
+
 
 
 <div class="row">
@@ -24,7 +33,7 @@
 
 <form method = "post" action="/adding">
   <div class="form-group">
-    <label for="exampleInputItem1">Song: </label>
+    <label for="exampleInputItem1"><font color="white">Song</font: </label>
     <input type="nameofitem" name="song" class="form-control" id="InputItemName" placeholder="Song Name">
   </div>
   <div class="form-group">
