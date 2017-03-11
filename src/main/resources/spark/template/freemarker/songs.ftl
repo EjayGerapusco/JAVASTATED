@@ -5,7 +5,7 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<title>You just added:</title>
+<title>${title}</title>
 
 </head>
 <body>
@@ -17,8 +17,8 @@
   <div style="width:800px; margin:0 auto;">
       centered content
 
-<h2>Song:${song_name}</h2>
-<h2>Artist:${song_artist}</h2>
+<h2>Song:${song}</h2>
+
 
 </div>
 

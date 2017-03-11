@@ -1,6 +1,7 @@
 package com.sample.sparkdemo;
 
 import com.sample.sparkdemo.model.Song;
+import com.sample.sparkdemo.model.List;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,64 +12,79 @@ import static spark.Spark.*;
 
 public class DemoMain {
 
+    public static String render( Map<String, Object> model, String template){
+        return new FreeMarkerEngine().render( new ModelAndView(model, template) );
+    };
+
 public static void main(String[] args) {
     staticFiles.location("/css"); // Static files
 
+    List list = new List();
 
-    get("/view", (req, res) -> {
-        Song s = new Song();
-        s.setName("test");
-        s.setCode("testing");
-
-        Song.putSong(s);
-
-        Map<String, Object> model = new HashMap<>();
-
-        model.put("title", "Viewing Page");
-        model.put("songs", Song.all());
-        model.put("foundsong", Song.findSong("p"));
-
-        return new ModelAndView(model, "view.ftl"); // located in src/test/resources/spark/template/freemarker
-       
-           
-       }, new FreeMarkerEngine());
+    get("/list", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            model.put("title", "List Inventory");
+            model.put("inventory", list.all());
+            return render(model, "list.ftl");
+        });
     
     
     get("/", (req, res) -> {
         Map<String, Object> model = new HashMap<>();
         
         model.put("title","Javastated");
-       
-        
-        return new ModelAndView(model, "index.ftl"); // located in src/test/resources/spark/template/freemarker
-   
-       
-   }, new FreeMarkerEngine());
+        return render(model, "index.ftl");
 
-
-
+    });
 
 get("/adding", (request, response) -> {
         Map<String, Object> model = new HashMap<>();
         model.put("forms", "Share Your Playlist");
-        return new ModelAndView(model, "adding.ftl");
-    }, new FreeMarkerEngine());
+        return render(model, "adding.ftl");
+    });
 
 
 
 
  post("/adding", (req,res) -> {
-            String from_input1;
-            String from_input2;
 
-            from_input1 = req.queryParams("song");
-            from_input2 = req.queryParams("artist");
+     Map<String, Object> model = new HashMap<>();
+            String code = request.queryParams("code");
+            String name = request.queryParams("name");
+
+            Song song = new Song();
+            song.setName(name);
+            song.setCode(code);
+
+            list.add(song);
         
+        model.put("title", "New Song");
+        model.put("song", song);
+        return render(model, "songs.ftl");
+    });
+
+    get("/delete/:code", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
-        model.put("song_name", from_input1);
-        model.put("song_artist", from_input2);
-        return new ModelAndView(model, "songs.ftl");
-    }, new FreeMarkerEngine());
+            String code = request.params(":code");
+            Song song = list.findSongByCode(code);
+            
+            model.put("title", "Delete Song");
+            model.put("item", song);
+            // model.put("searchcode", code);
+            // model.put("founditem", item);
+            return render(model, "delete.ftl");
+        });
+
+    post("/delete", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            String code = request.queryParams("code");
+            Song song = list.findSongByCode(code);
+            list.deleteSongByCode(code);
+            
+            model.put("title", "Deleted Item");
+            model.put("item", song);
+            return render(model, "deleted.ftl");
+        });
 
 }
 
