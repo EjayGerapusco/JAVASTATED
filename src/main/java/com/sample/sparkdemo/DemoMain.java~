@@ -48,7 +48,7 @@ public class DemoMain {
             song.setCode(code);
             song.setName(name);
 
-            inventory.add(song);
+            inventory.add(item);
 
             model.put("title", "New Song");
             model.put("song", song);
@@ -72,10 +72,10 @@ public class DemoMain {
         get("/delete/:code", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             String code = request.params(":code");
-            Song song = inventory.findSongByCode(code);
+            Item item = inventory.findItemByCode(code);
             
             model.put("title", "Delete Item");
-            model.put("song", song);
+            model.put("item", item);
             // model.put("searchcode", code);
             // model.put("founditem", item);
             return render(model, "delete.ftl");
@@ -84,11 +84,11 @@ public class DemoMain {
         post("/delete", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             String code = request.queryParams("code");
-            Song song = inventory.findSongByCode(code);
-            inventory.deleteSongByCode(code);
+            Item item = inventory.findItemByCode(code);
+            inventory.deleteItemByCode(code);
             
             model.put("title", "Deleted Item");
-            model.put("song", song);
+            model.put("item", item);
             return render(model, "deleted.ftl");
         });
 
@@ -110,13 +110,13 @@ public class DemoMain {
         get("/show/:code", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             String code = request.params(":code");
-            Song song = inventory.findSongByCode(code);
+            Item item = inventory.findItemByCode(code);
             
-            model.put("title", "View Song");
-            model.put("song", song);
+            model.put("title", "Show Item");
+            model.put("item", item);
             // model.put("searchcode", code);
             // model.put("founditem", item);
-            return render(model, "view.ftl");
+            return render(model, "show.ftl");
         });
 
 

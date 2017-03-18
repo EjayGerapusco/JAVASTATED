@@ -2,7 +2,8 @@ package com.sample.sparkdemo.model;
 import java.util.ArrayList;
 
 public class Song {
-	String name, code;
+	public String name, code;
+
 
 	public void setName(String name){
 		this.name = name;

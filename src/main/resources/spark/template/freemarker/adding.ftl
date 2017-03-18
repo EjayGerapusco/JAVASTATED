@@ -34,11 +34,11 @@ Add a Song
 <form method = "post" action="/adding">
   <div class="form-group">
     <label for="exampleInputItem1"><font color="white">Song</font: </label>
-    <input type="nameofitem" name="song" class="form-control" id="InputItemName" placeholder="Song Name">
+    <input type="name" name="name" class="form-control" id="InputItemName" placeholder="Song Name">
   </div>
   <div class="form-group">
     <label for="exampleInputDetails1">Artist: </label>
-    <input type="details" name="artist" class="form-control" id="InputItemDetails" placeholder="Artist">
+    <input type="code" name="code" class="form-control" id="song_code" placeholder="Artist">
   </div>
  
   <button type="submit" class="btn btn-default">
