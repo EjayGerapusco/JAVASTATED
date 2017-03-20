@@ -27,16 +27,44 @@ public class DemoMain {
             Map<String, Object> model = new HashMap<>();
             
             model.put("title","JAVASTATED");
+            model.put("inventory", inventory.all());
             
             return render(model, "index.ftl");
         });
-    
+        get("/about", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            
+            return render(model, "about.ftl");
+        });
+        get("/team", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            
+            return render(model, "team.ftl");
+        });
+            get("/contact", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            
+            return render(model, "contact.ftl");
+        });
+        get("/slist", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            model.put("title", "List of Songs");
+            model.put("inventory", inventory.all());
+            return render(model, "slist.ftl");
+        });
 
         get("/adding", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             model.put("forms", "Share Your Playlist");
             return render(model, "adding.ftl");
         });
+        get("/songs", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            model.put("title", "List of Songs");
+            model.put("inventory", inventory.all());
+            return render(model, "songs.ftl");
+        });
+        
 
 
         post("/adding", (request,response) -> {

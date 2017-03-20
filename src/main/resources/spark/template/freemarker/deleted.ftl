@@ -3,7 +3,12 @@
 <head>
 <style>
   body {
-    background-image: url("https://images2.alphacoders.com/701/thumb-1920-70172.jpg");
+     background-size: cover;
+    background-image: url("https://s-media-cache-ak0.pinimg.com/originals/31/80/28/3180285781fb9e065303947ea375574a.jpg");
+    min-height: 100%;
+  }
+  #tcenter{
+    padding-top: 100px;
   }
 </style> 
   <!-- Latest compiled and minified CSS -->
@@ -14,28 +19,13 @@
 
 </head>
 <body>
-<div class="text-center">
+<div class="text-center" id = "tcenter">
 <h1>SONG DELETED</h1>
-<h2>${song}</h2>
-</div>
-
-
-<div class="row jumbotron">
-  <div class="col-md-4"></div>
-  <div class="col-md-4">
-    
-
-<div class="btn-group" role="group" aria-label="...">
-  
-  	<button type="button" class="btn btn-default">
+<button type="button" class="btn btn-default">
   		<a href="/">
   			Back to Homepage
   		</a>
   	</button>
-</div>
-
-<div class="btn-group" role="group" aria-label="...">
-  
     <button type="button" class="btn btn-default">
       <a href="/list">
         View Song list
@@ -44,9 +34,6 @@
 </div>
 
 
-  </div>
-  <div class="col-md-4"> 	
-</div>
 
 </body>
 
