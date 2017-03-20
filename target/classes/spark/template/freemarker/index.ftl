@@ -32,7 +32,7 @@ body, html {
 .bgimg-1 {
     background-position: center;
     background-size: cover;
-    background-image: url("https://s-media-cache-ak0.pinimg.com/originals/31/80/28/3180285781fb9e065303947ea375574a.jpg");
+    background-image: url("http://www.wallpaperscharlie.com/wp-content/uploads/2016/06/Vintage-Photography-Desktop-Wallpapers-6.jpg");
     min-height: 100%;
 }
 .w3-bar .w3-button {

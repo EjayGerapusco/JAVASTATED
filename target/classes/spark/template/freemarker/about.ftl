@@ -13,7 +13,7 @@
 }
 body{
   background-size: cover;
-    background-image: url("https://s-media-cache-ak0.pinimg.com/originals/31/80/28/3180285781fb9e065303947ea375574a.jpg");
+    background-image: url("http://www.zastavki.com/pictures/1920x1200/2010/3D-graphics_DJ_at_work_026349_.jpg");
     min-height: 100%;
 }
 </style>
@@ -40,6 +40,7 @@ body{
 </div>
 <div class="w3-container w3-padding-128" id="about">
   <h3 class="w3-center w3-text-red">ABOUT THE COMPANY</h3>
+  <p class="w3-center w3-large w3-text-red">A java Web App where everyone can share their Music to the World</p>
   <p class="w3-center w3-large w3-text-red">Key features of our company</p>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
     <div class="w3-quarter">
